@@ -248,6 +248,31 @@ body {
   margin-bottom: 1.5rem;
 }
 
+/* Source Links */
+.source-link {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.source-link a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  display: inline-block;
+}
+
+.source-link a:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* Content Grid */
 .content-grid {
   display: grid;
@@ -275,6 +300,28 @@ body {
   line-height: 1.8;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
+}
+
+.research-questions {
+  list-style: none;
+  padding-left: 0;
+}
+
+.research-questions li {
+  padding: 0.75rem 0;
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.research-questions li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .info-card {
@@ -310,44 +357,73 @@ body {
   font-weight: bold;
 }
 
-/* Stats Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+/* Stats Overview */
+.stats-overview {
+  margin-bottom: 3rem;
 }
 
-.stat-card {
+.adoption-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.adoption-item {
   background: white;
   padding: 2rem;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
-  text-align: center;
-  transition: var(--transition);
   border: 1px solid var(--border-light);
 }
 
-.stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.stat-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.stat-value {
+.adoption-number {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary);
-  margin-bottom: 0.5rem;
+  display: block;
+  margin-bottom: 1rem;
 }
 
-.stat-description {
+.adoption-item p {
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Discipline Breakdown */
+.discipline-breakdown {
+  margin: 3rem 0;
+}
+
+.discipline-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.discipline-item {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.discipline-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.discipline-item p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Table Styles */
@@ -360,6 +436,7 @@ body {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-light);
+  margin-bottom: 1rem;
 }
 
 .modern-table {
@@ -402,40 +479,6 @@ body {
 .percentage {
   font-weight: 600;
   color: var(--primary);
-}
-
-/* Quote Card */
-.quote-card {
-  background: white;
-  padding: 3rem;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  margin: 3rem 0;
-  position: relative;
-  border-left: 4px solid var(--primary);
-}
-
-.quote-icon {
-  font-size: 4rem;
-  color: var(--primary);
-  opacity: 0.3;
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-}
-
-.quote-text {
-  font-size: 1.25rem;
-  font-style: italic;
-  line-height: 1.7;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-.quote-author {
-  font-weight: 600;
-  color: var(--text-secondary);
 }
 
 /* Tools Grid */
@@ -481,6 +524,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .tag {
@@ -533,6 +577,7 @@ body {
 .step-content p {
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Benefits and Barriers */
@@ -545,7 +590,7 @@ body {
 
 .benefit-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
   background: white;
   padding: 2rem;
@@ -558,16 +603,19 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: var(--success);
+  flex-shrink: 0;
 }
 
-.benefit-text {
+.benefit-text p {
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .barrier-list {
   display: grid;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .barrier-item {
@@ -589,6 +637,100 @@ body {
 
 .barrier-text {
   color: var(--text-secondary);
+}
+
+/* Trends & Segmentation */
+.trends-content {
+  display: grid;
+  gap: 3rem;
+}
+
+.generational-section,
+.gender-gap-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.generation-stats,
+.gender-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.generation-item,
+.gender-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.generation-number,
+.gender-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.generation-label,
+.gender-label {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.gender-note {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.evolution-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.emerging-tools-section {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.emerging-tools-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.emerging-tool {
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.emerging-tool h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.emerging-tool p {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /* Integrity Section */
@@ -616,6 +758,7 @@ body {
 
 .policy-stat {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .big-number {
@@ -634,6 +777,7 @@ body {
 .awareness-stats {
   display: grid;
   gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .awareness-item {
@@ -653,6 +797,13 @@ body {
   border-radius: 50%;
   font-weight: 600;
   flex-shrink: 0;
+}
+
+.detection-note {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Best Practices */
@@ -793,6 +944,7 @@ body {
 .trend-card p {
   color: var(--text-secondary);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 /* Recommendations */
@@ -931,7 +1083,11 @@ body {
     gap: 2rem;
   }
   
-  .stats-grid {
+  .adoption-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .discipline-stats {
     grid-template-columns: 1fr;
   }
   
@@ -942,6 +1098,11 @@ body {
   .benefits-barriers {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .generation-stats,
+  .gender-stats {
+    grid-template-columns: 1fr;
   }
   
   .integrity-grid {
@@ -1000,19 +1161,23 @@ body {
     opacity: 0.2;
   }
   
-  .stat-card,
+  .adoption-item,
+  .discipline-item,
   .tool-category,
   .workflow-step,
   .benefit-item,
   .barrier-item,
+  .generational-section,
+  .gender-gap-section,
+  .evolution-section,
+  .emerging-tools-section,
   .integrity-card,
   .practice-item,
   .faq-item,
   .trend-card,
   .recommendation-item,
   .forward-statement,
-  .info-card,
-  .quote-card {
+  .info-card {
     background: var(--bg-tertiary);
     border-color: var(--border-light);
   }
@@ -1030,6 +1195,12 @@ body {
   }
   
   .faq-question:hover {
+    background: var(--bg-secondary);
+  }
+  
+  .generation-item,
+  .gender-item,
+  .emerging-tool {
     background: var(--bg-secondary);
   }
 }
