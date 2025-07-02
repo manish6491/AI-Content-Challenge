@@ -92,22 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Add loading animation to tables
-  const tables = document.querySelectorAll('.modern-table');
-  tables.forEach(table => {
-    const rows = table.querySelectorAll('tbody tr');
-    rows.forEach((row, index) => {
-      row.style.opacity = '0';
-      row.style.transform = 'translateX(-20px)';
-      row.style.transition = `opacity 0.4s ease-out ${index * 0.1}s, transform 0.4s ease-out ${index * 0.1}s`;
-      
-      setTimeout(() => {
-        row.style.opacity = '1';
-        row.style.transform = 'translateX(0)';
-      }, 500 + (index * 100));
-    });
-  });
-  
   // Add parallax effect to hero section
   const hero = document.querySelector('.hero');
   const heroBackground = document.querySelector('.hero-background');
@@ -121,30 +105,161 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Add typing effect to hero title (optional enhancement)
-  const heroTitle = document.querySelector('.hero-title');
-  if (heroTitle) {
-    const text = heroTitle.textContent;
-    heroTitle.textContent = '';
-    heroTitle.style.borderRight = '2px solid var(--primary)';
-    
-    let i = 0;
-    const typeWriter = () => {
-      if (i < text.length) {
-        heroTitle.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeWriter, 50);
-      } else {
-        setTimeout(() => {
-          heroTitle.style.borderRight = 'none';
-        }, 1000);
-      }
-    };
-    
-    // Start typing effect after a delay
-    setTimeout(typeWriter, 1000);
-  }
+  // Initialize Charts
+  initializeCharts();
 });
+
+// Chart Initialization
+function initializeCharts() {
+  // Tool Usage Pie Chart
+  const toolCtx = document.getElementById('toolUsageChart');
+  if (toolCtx) {
+    new Chart(toolCtx, {
+      type: 'pie',
+      data: {
+        labels: ['ChatGPT', 'Grammarly (AI mode)', 'Microsoft Copilot', 'Claude AI', 'GitHub Copilot'],
+        datasets: [{
+          data: [66, 25, 25, 12, 11],
+          backgroundColor: [
+            '#4A90E2',
+            '#607D8B',
+            '#00BCD4',
+            '#4CAF50',
+            '#FF9800'
+          ],
+          borderWidth: 2,
+          borderColor: '#ffffff'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 20,
+              font: {
+                family: 'Inter',
+                size: 12
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label + ': ' + context.parsed + '%';
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Evolution Histogram
+  const evolutionCtx = document.getElementById('evolutionChart');
+  if (evolutionCtx) {
+    new Chart(evolutionCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2023', '2024', '2025'],
+        datasets: [{
+          label: '% under-30 adults using ChatGPT',
+          data: [33, 43, 58],
+          backgroundColor: '#4A90E2',
+          borderColor: '#2D6BBF',
+          borderWidth: 2,
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.parsed.y + '% adoption rate';
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 70,
+            ticks: {
+              callback: function(value) {
+                return value + '%';
+              }
+            },
+            grid: {
+              color: '#E1E8ED'
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            }
+          }
+        }
+      }
+    });
+  }
+
+  // Academic Integrity Infographic
+  const integrityCtx = document.getElementById('integrityChart');
+  if (integrityCtx) {
+    new Chart(integrityCtx, {
+      type: 'doughnut',
+      data: {
+        labels: [
+          'Have formal AI policy (28%)',
+          'Developing policy (32%)',
+          'No policy (40%)'
+        ],
+        datasets: [{
+          data: [28, 32, 40],
+          backgroundColor: [
+            '#4CAF50',
+            '#FF9800',
+            '#F44336'
+          ],
+          borderWidth: 3,
+          borderColor: '#ffffff'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        cutout: '60%',
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              padding: 20,
+              font: {
+                family: 'Inter',
+                size: 12
+              }
+            }
+          },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.label;
+              }
+            }
+          }
+        }
+      }
+    });
+  }
+}
 
 // Add click ripple effect to buttons and interactive elements
 function createRipple(event) {

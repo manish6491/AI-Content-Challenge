@@ -50,6 +50,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Simple inline links */
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
 /* Navigation */
 .nav {
   position: fixed;
@@ -88,6 +100,7 @@ body {
 
 .nav-links a:hover {
   color: var(--primary);
+  text-decoration: none;
 }
 
 .nav-links a::after {
@@ -248,29 +261,64 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* Source Links */
-.source-link {
-  margin: 1rem 0;
+/* Research Scope Section */
+.scope-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.scope-intro {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.source-link a {
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--primary);
-  border-radius: var(--radius-sm);
-  transition: var(--transition-fast);
-  display: inline-block;
+.research-questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.source-link a:hover {
+.question-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  transition: var(--transition);
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.question-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
   background: var(--primary);
   color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.question-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.question-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* Content Grid */
@@ -300,28 +348,6 @@ body {
   line-height: 1.8;
   color: var(--text-primary);
   margin-bottom: 1.5rem;
-}
-
-.research-questions {
-  list-style: none;
-  padding-left: 0;
-}
-
-.research-questions li {
-  padding: 0.75rem 0;
-  position: relative;
-  padding-left: 2rem;
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-
-.research-questions li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 1.25rem;
 }
 
 .info-card {
@@ -391,6 +417,31 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Visualization Containers */
+.visualization-container {
+  margin: 3rem 0;
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  min-height: 400px;
+}
+
+.chart-source {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
 /* Discipline Breakdown */
 .discipline-breakdown {
   margin: 3rem 0;
@@ -424,61 +475,6 @@ body {
 .discipline-item p {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-/* Table Styles */
-.table-container {
-  margin: 3rem 0;
-}
-
-.table-wrapper {
-  overflow-x: auto;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
-  margin-bottom: 1rem;
-}
-
-.modern-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: white;
-}
-
-.modern-table th {
-  background: var(--bg-tertiary);
-  padding: 1rem;
-  text-align: left;
-  font-weight: 600;
-  color: var(--text-primary);
-  border-bottom: 2px solid var(--border-medium);
-}
-
-.modern-table td {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border-light);
-}
-
-.modern-table tr:hover {
-  background: var(--bg-secondary);
-}
-
-.rank-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 24px;
-  height: 24px;
-  background: var(--primary);
-  color: white;
-  border-radius: 50%;
-  font-size: 0.75rem;
-  font-weight: 600;
-}
-
-.percentage {
-  font-weight: 600;
-  color: var(--primary);
 }
 
 /* Tools Grid */
@@ -685,6 +681,7 @@ body {
   font-weight: 500;
 }
 
+.generation-note,
 .gender-note {
   color: var(--text-secondary);
   line-height: 1.6;
@@ -733,7 +730,27 @@ body {
   line-height: 1.5;
 }
 
+.tools-source {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
 /* Integrity Section */
+.integrity-infographic {
+  margin-bottom: 3rem;
+}
+
+.infographic-container {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .integrity-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -772,6 +789,11 @@ body {
 .stat-text {
   color: var(--text-secondary);
   margin-top: 0.5rem;
+}
+
+.policy-source {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
 }
 
 .awareness-stats {
@@ -1083,6 +1105,10 @@ body {
     gap: 2rem;
   }
   
+  .research-questions-grid {
+    grid-template-columns: 1fr;
+  }
+  
   .adoption-stats {
     grid-template-columns: 1fr;
   }
@@ -1177,21 +1203,12 @@ body {
   .trend-card,
   .recommendation-item,
   .forward-statement,
-  .info-card {
+  .info-card,
+  .question-card,
+  .visualization-container,
+  .infographic-container {
     background: var(--bg-tertiary);
     border-color: var(--border-light);
-  }
-  
-  .modern-table {
-    background: var(--bg-tertiary);
-  }
-  
-  .modern-table th {
-    background: var(--bg-secondary);
-  }
-  
-  .modern-table tr:hover {
-    background: var(--bg-secondary);
   }
   
   .faq-question:hover {
