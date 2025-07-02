@@ -69,14 +69,8 @@ body {
   padding: 0 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 70px;
-}
-
-.nav-brand {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--primary);
 }
 
 .nav-links {
@@ -889,66 +883,6 @@ body {
   font-style: italic;
 }
 
-/* Footer */
-.footer {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-  padding: 3rem 0 1rem;
-  border-top: 1px solid var(--border-light);
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 2rem;
-}
-
-.footer-brand h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.footer-brand p {
-  color: var(--text-secondary);
-}
-
-.footer-links {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.footer-section h4 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.footer-section a {
-  display: block;
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-bottom: 0.5rem;
-  transition: var(--transition-fast);
-}
-
-.footer-section a:hover {
-  color: var(--primary);
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--border-light);
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.footer-bottom p {
-  color: var(--text-light);
-  font-size: 0.875rem;
-}
-
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -1015,15 +949,6 @@ body {
   }
   
   .trend-cards {
-    grid-template-columns: 1fr;
-  }
-  
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .footer-links {
     grid-template-columns: 1fr;
   }
 }
