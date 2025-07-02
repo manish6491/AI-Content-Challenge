@@ -1078,6 +1078,16 @@ a:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+  body {
+    padding-top: 0 !important;   /* in case there's padding for nav */
+  }
+
+  nav {
+    display: none;
+  }
+
+  
   .nav-container {
     padding: 0 1rem;
   }
