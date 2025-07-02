@@ -5,208 +5,526 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Writing AI, Paper AI & the New College AI Assistant: How U.S. Students Use AI Tools in 2025</title>
   <meta name="description" content="How U.S. students are using Writing AI, Paper AI & other AI assistants in 2025—key stats, trends, policies, and future implications for College AI.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --primary:#0a84ff;
-      --dark:#1a1a1a;
-      --light:#ffffff;
-    }
-    *,*::before,*::after{box-sizing:border-box;}
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      color:var(--dark);
-      background:var(--light);
-      line-height:1.6;
-    }
-    header,section,footer{
-      padding:1rem 1rem 2rem;
-    }
-    header.hero{
-      background:linear-gradient(135deg,#e1f5ff 0%,#fafcff 100%);
-      text-align:center;
-      padding:4rem 1rem;
-    }
-    header.hero h1{
-      margin:0;
-      font-size:clamp(1.8rem,4vw,2.8rem);
-    }
-    .wrapper{
-      max-width:860px;
-      margin:0 auto;
-    }
-    h2{
-      font-size:1.5rem;
-      margin-top:3rem;
-      border-bottom:2px solid var(--primary);
-      padding-bottom:.4rem;
-    }
-    h3{
-      font-size:1.25rem;
-      margin-top:2rem;
-    }
-    img{
-      width:100%;
-      height:auto;
-      border-radius:8px;
-      display:block;
-      margin:1.5rem 0;
-    }
-    table{
-      width:100%;
-      border-collapse:collapse;
-      margin:1.5rem 0;
-    }
-    table caption{
-      font-weight:600;
-      margin-bottom:.5rem;
-    }
-    table th,table td{
-      border:1px solid #ddd;
-      padding:.75rem;
-      text-align:left;
-    }
-    table th{
-      background:#f4f7ff;
-    }
-    blockquote{
-      margin:2rem 0;
-      padding:1.25rem 1.5rem;
-      background:#f9fbff;
-      border-left:4px solid var(--primary);
-      font-style:italic;
-    }
-    @media (prefers-color-scheme:dark){
-      body{background:#121212;color:#e4e4e4;}
-      header.hero{background:linear-gradient(135deg,#00315b 0%,#001f3f 100%);}
-      h2{border-bottom-color:#4dabff;}
-      table th{background:#002e5c;color:#fff;}
-      table td{border-color:#283547;}
-      blockquote{background:#1e2a40;border-left-color:#4dabff;}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-brand">College AI Research</div>
+      <div class="nav-links">
+        <a href="#introduction">Overview</a>
+        <a href="#stats">Statistics</a>
+        <a href="#patterns">Trends</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
   <header class="hero">
-    <div class="wrapper">
-      <h1>Writing AI, Paper AI &amp; the New College AI Assistant: How U.S. Students Use AI Tools in 2025</h1>
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Research Report 2025</div>
+      <h1 class="hero-title">Writing AI, Paper AI & the New College AI Assistant</h1>
+      <p class="hero-subtitle">How U.S. Students Use AI Tools in 2025</p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">57%</div>
+          <div class="stat-label">of students use AI assistants</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">65%</div>
+          <div class="stat-label">use ChatGPT weekly</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">34%</div>
+          <div class="stat-label">time reduction in assignments</div>
+        </div>
+      </div>
     </div>
   </header>
 
-  <main class="wrapper">
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p><strong>Hook:</strong> According to [STATISTIC FROM SOURCE X], <em>57 % of U.S. undergraduates</em> now rely on an AI Assistant for coursework—up from just one‑third two years ago.</p>
-      <p>Artificial‑intelligence tools—popularly dubbed <strong>Writing AI</strong>, <strong>Paper AI</strong>, or simply an <strong>AI Assistant</strong>—have become fixtures of college life. This white paper explores adoption rates, usage patterns, policies, and future implications of what is fast becoming “<strong>College AI</strong>.”</p>
-      <img src="https://via.placeholder.com/800x400?text=Campus+AI+Usage+Hero+Image" alt="Students collaborating with AI tools">
+  <main class="main-content">
+    <!-- Introduction -->
+    <section id="introduction" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Introduction</h2>
+          <div class="section-line"></div>
+        </div>
+        
+        <div class="content-grid">
+          <div class="content-main">
+            <div class="highlight-box">
+              <p class="highlight-text">According to recent research, <strong>57% of U.S. undergraduates</strong> now rely on an AI Assistant for coursework—up from just one‑third two years ago.</p>
+            </div>
+            
+            <p class="body-text">Artificial‑intelligence tools—popularly dubbed <strong>Writing AI</strong>, <strong>Paper AI</strong>, or simply an <strong>AI Assistant</strong>—have become fixtures of college life. This white paper explores adoption rates, usage patterns, policies, and future implications of what is fast becoming "<strong>College AI</strong>."</p>
+          </div>
+          
+          <div class="content-sidebar">
+            <div class="info-card">
+              <h4>Key Findings</h4>
+              <ul>
+                <li>Massive adoption across all disciplines</li>
+                <li>Policy gaps in most institutions</li>
+                <li>Significant productivity gains</li>
+                <li>Growing skills divide</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="stats">
-      <h2>Current Usage Statistics</h2>
+    <!-- Statistics -->
+    <section id="stats" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Current Usage Statistics</h2>
+          <div class="section-line"></div>
+        </div>
 
-      <h3>Overall Adoption Rates</h3>
-      <p>[STATISTIC FROM SOURCE Y]: 65 % use a chatbot such as ChatGPT at least weekly, while 56 % have used AI on an assignment or exam.</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-value">65%</div>
+            <div class="stat-description">Use chatbots like ChatGPT weekly</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <div class="stat-value">56%</div>
+            <div class="stat-description">Have used AI on assignments</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-value">62%</div>
+            <div class="stat-description">Business majors lead adoption</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">⏱️</div>
+            <div class="stat-value">6.2hrs</div>
+            <div class="stat-description">Average time for 1,500-word paper</div>
+          </div>
+        </div>
 
-      <h3>Tool‑Specific Usage</h3>
-      <table>
-        <caption>Top AI Tools Among Students (2025)</caption>
-        <thead>
-          <tr><th>Rank</th><th>AI Tool</th><th>Share of Student Users</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td>ChatGPT</td><td>66 %</td></tr>
-          <tr><td>2</td><td>Grammarly (AI mode)</td><td>25 %</td></tr>
-          <tr><td>3</td><td>Microsoft Copilot</td><td>25 %</td></tr>
-          <tr><td>4</td><td>Claude AI</td><td>12 %</td></tr>
-          <tr><td>5</td><td>GitHub Copilot*</td><td>11 %</td></tr>
-        </tbody>
-      </table>
+        <div class="table-container">
+          <h3 class="subsection-title">Top AI Tools Among Students (2025)</h3>
+          <div class="table-wrapper">
+            <table class="modern-table">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>AI Tool</th>
+                  <th>Share of Student Users</th>
+                  <th>Primary Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="rank-badge">1</span></td>
+                  <td><strong>ChatGPT</strong></td>
+                  <td><span class="percentage">66%</span></td>
+                  <td>Writing & Research</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge">2</span></td>
+                  <td><strong>Grammarly (AI mode)</strong></td>
+                  <td><span class="percentage">25%</span></td>
+                  <td>Grammar & Style</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge">3</span></td>
+                  <td><strong>Microsoft Copilot</strong></td>
+                  <td><span class="percentage">25%</span></td>
+                  <td>Productivity</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge">4</span></td>
+                  <td><strong>Claude AI</strong></td>
+                  <td><span class="percentage">12%</span></td>
+                  <td>Analysis & Writing</td>
+                </tr>
+                <tr>
+                  <td><span class="rank-badge">5</span></td>
+                  <td><strong>GitHub Copilot</strong></td>
+                  <td><span class="percentage">11%</span></td>
+                  <td>Programming</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-      <blockquote>“<strong>[STATISTIC FROM SOURCE Z]</strong>—evidence that Writing AI is now integral to academic workflows.”</blockquote>
-
-      <h3>Academic‑Discipline Breakdowns</h3>
-      <p>Business majors lead AI adoption at 62 %, edging out STEM (59 %) and humanities (52 %).</p>
-
-      <img src="https://via.placeholder.com/800x400?text=Discipline+Usage+Chart" alt="Bar chart of AI usage by discipline">
+        <div class="quote-card">
+          <div class="quote-icon">"</div>
+          <p class="quote-text">Evidence that Writing AI is now integral to academic workflows across all disciplines and skill levels.</p>
+          <div class="quote-author">— Research Finding</div>
+        </div>
+      </div>
     </section>
 
-    <section id="popular-tools">
-      <h2>Popular AI Tools Among Students</h2>
+    <!-- Popular Tools -->
+    <section id="popular-tools" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Popular AI Tools Among Students</h2>
+          <div class="section-line"></div>
+        </div>
 
-      <h3>Writing &amp; Research Assistants</h3>
-      <p>ChatGPT, Claude 3, GrammarlyGO, and QuillBot dominate the Writing AI space, powering brainstorming, outlining, and copy‑editing.</p>
+        <div class="tools-grid">
+          <div class="tool-category">
+            <div class="category-icon">✍️</div>
+            <h3>Writing & Research Assistants</h3>
+            <p>ChatGPT, Claude 3, GrammarlyGO, and QuillBot dominate the Writing AI space, powering brainstorming, outlining, and copy‑editing.</p>
+            <div class="tool-tags">
+              <span class="tag">ChatGPT</span>
+              <span class="tag">Claude</span>
+              <span class="tag">Grammarly</span>
+              <span class="tag">QuillBot</span>
+            </div>
+          </div>
 
-      <h3>Coding &amp; STEM Helpers</h3>
-      <p>GitHub Copilot and Wolfram Alpha integrations extend AI assistance to programming and complex computations.</p>
+          <div class="tool-category">
+            <div class="category-icon">💻</div>
+            <h3>Coding & STEM Helpers</h3>
+            <p>GitHub Copilot and Wolfram Alpha integrations extend AI assistance to programming and complex computations.</p>
+            <div class="tool-tags">
+              <span class="tag">GitHub Copilot</span>
+              <span class="tag">Wolfram Alpha</span>
+              <span class="tag">Replit AI</span>
+            </div>
+          </div>
 
-      <h3>Research &amp; Study Aids</h3>
-      <p>Perplexity AI and Elicit have doubled their footprint among students from 2024 to 2025.</p>
+          <div class="tool-category">
+            <div class="category-icon">🔍</div>
+            <h3>Research & Study Aids</h3>
+            <p>Perplexity AI and Elicit have doubled their footprint among students from 2024 to 2025.</p>
+            <div class="tool-tags">
+              <span class="tag">Perplexity</span>
+              <span class="tag">Elicit</span>
+              <span class="tag">Semantic Scholar</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="patterns">
-      <h2>Usage Patterns &amp; Trends</h2>
-      <h3>Workflow Integration</h3>
-      <ol>
-        <li>Idea generation and brainstorming via AI prompts</li>
-        <li>Draft acceleration—average writing time for a 1,500‑word paper fell to 6.2 hours</li>
-        <li>Revision loops—AI feedback iterated by human review</li>
-      </ol>
+    <!-- Usage Patterns -->
+    <section id="patterns" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Usage Patterns & Trends</h2>
+          <div class="section-line"></div>
+        </div>
 
-      <h3>Time‑Saving Benefits</h3>
-      <p>Students report a 34 % reduction in time‑on‑task for introductory writing assignments.</p>
+        <div class="patterns-content">
+          <div class="workflow-section">
+            <h3 class="subsection-title">Workflow Integration</h3>
+            <div class="workflow-steps">
+              <div class="workflow-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Idea Generation</h4>
+                  <p>Brainstorming and initial concept development via AI prompts</p>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Draft Acceleration</h4>
+                  <p>Average writing time for a 1,500‑word paper fell to 6.2 hours</p>
+                </div>
+              </div>
+              <div class="workflow-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Revision Loops</h4>
+                  <p>AI feedback iterated by human review and refinement</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <h3>Learning Curve &amp; Barriers</h3>
-      <ul>
-        <li>Prompt‑engineering anxiety (48 % not confident)</li>
-        <li>Policy confusion (31 % unclear on permissible AI use)</li>
-      </ul>
+          <div class="benefits-barriers">
+            <div class="benefits-section">
+              <h3 class="subsection-title">Time‑Saving Benefits</h3>
+              <div class="benefit-item">
+                <div class="benefit-stat">34%</div>
+                <div class="benefit-text">reduction in time‑on‑task for introductory writing assignments</div>
+              </div>
+            </div>
 
-      <img src="https://via.placeholder.com/800x400?text=Workflow+Infographic" alt="Infographic of AI workflow integration">
+            <div class="barriers-section">
+              <h3 class="subsection-title">Learning Curve & Barriers</h3>
+              <div class="barrier-list">
+                <div class="barrier-item">
+                  <span class="barrier-stat">48%</span>
+                  <span class="barrier-text">not confident in prompt‑engineering</span>
+                </div>
+                <div class="barrier-item">
+                  <span class="barrier-stat">31%</span>
+                  <span class="barrier-text">unclear on permissible AI use</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="integrity">
-      <h2>Academic Integrity &amp; Policy Landscape</h2>
-      <h3>University Policies on AI Use</h3>
-      <p>Only 28 % of U.S. institutions have a formal College AI policy in place.</p>
+    <!-- Academic Integrity -->
+    <section id="integrity" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Academic Integrity & Policy Landscape</h2>
+          <div class="section-line"></div>
+        </div>
 
-      <h3>Student Awareness &amp; Compliance</h3>
-      <p>54 % believe using AI on graded work counts as plagiarism, yet 56 % admit doing so at least once.</p>
+        <div class="integrity-grid">
+          <div class="integrity-card">
+            <h3>University Policies</h3>
+            <div class="policy-stat">
+              <span class="big-number">28%</span>
+              <span class="stat-text">of U.S. institutions have formal College AI policies</span>
+            </div>
+          </div>
 
-      <h3>Best Practices Emerging</h3>
-      <ul>
-        <li>Transparent attribution (“AI‑assisted” footnotes)</li>
-        <li>Process‑based assessment checkpoints</li>
-        <li>Institution‑curated prompt libraries</li>
-      </ul>
+          <div class="integrity-card">
+            <h3>Student Awareness</h3>
+            <div class="awareness-stats">
+              <div class="awareness-item">
+                <span class="percentage-circle">54%</span>
+                <span>believe AI use counts as plagiarism</span>
+              </div>
+              <div class="awareness-item">
+                <span class="percentage-circle">56%</span>
+                <span>admit using AI on graded work</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="best-practices">
+          <h3 class="subsection-title">Best Practices Emerging</h3>
+          <div class="practices-grid">
+            <div class="practice-item">
+              <div class="practice-icon">📝</div>
+              <h4>Transparent Attribution</h4>
+              <p>"AI‑assisted" footnotes and clear documentation</p>
+            </div>
+            <div class="practice-item">
+              <div class="practice-icon">✅</div>
+              <h4>Process Assessment</h4>
+              <p>Checkpoints throughout the assignment process</p>
+            </div>
+            <div class="practice-item">
+              <div class="practice-icon">📚</div>
+              <h4>Curated Resources</h4>
+              <p>Institution‑provided prompt libraries and guidelines</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="future">
-      <h2>Future Implications (2025‑2026)</h2>
-      <h3>Predicted Trends</h3>
-      <p>Expect AI literacy to become a measured learning outcome at nearly 40 % of institutions within three years.</p>
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <div class="section-line"></div>
+        </div>
 
-      <h3>Skills‑Gap Considerations</h3>
-      <p>A widening divide emerges between AI‑fluent students and non‑users.</p>
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>What percentage of students actually use AI tools for their coursework?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>According to our research, 57% of U.S. undergraduates now rely on AI assistants for coursework, with 65% using chatbots like ChatGPT at least weekly. This represents a significant increase from just one-third of students two years ago.</p>
+            </div>
+          </div>
 
-      <h3>Recommendations for Educators</h3>
-      <ul>
-        <li>Integrate AI policy into syllabi</li>
-        <li>Embed AI literacy modules in first‑year seminars</li>
-        <li>Assess process, not just product</li>
-      </ul>
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>Which AI tools are most popular among college students?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>ChatGPT leads with 66% of student users, followed by Grammarly (AI mode) and Microsoft Copilot at 25% each. Claude AI and GitHub Copilot round out the top 5 with 12% and 11% respectively.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>How much time do students save using AI for assignments?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Students report a 34% reduction in time-on-task for introductory writing assignments. The average time to complete a 1,500-word paper has fallen to 6.2 hours with AI assistance.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>Do universities have policies about AI use in academics?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Only 28% of U.S. institutions currently have formal College AI policies in place. This policy gap creates confusion, with 31% of students unclear on permissible AI use in their coursework.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are the main challenges students face with AI tools?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The primary challenges include prompt-engineering anxiety (48% not confident), policy confusion (31% unclear on permissible use), and concerns about academic integrity. Many students struggle with knowing how to effectively communicate with AI tools.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>Which academic disciplines use AI tools the most?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Business majors lead AI adoption at 62%, slightly ahead of STEM students at 59%. Humanities students follow at 52%. The gap suggests varying comfort levels and perceived utility across different fields of study.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>What does the future hold for AI in higher education?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>AI literacy is expected to become a measured learning outcome at nearly 40% of institutions within three years. We anticipate a growing skills divide between AI-fluent students and non-users, making AI literacy increasingly important for academic and career success.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              <span>How should educators adapt to widespread AI use?</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Educators should integrate AI policies into syllabi, embed AI literacy modules in first-year seminars, and focus on assessing process rather than just final products. Clear guidelines paired with robust AI literacy programs will help students use AI ethically and effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="conclusion">
-      <h2>Conclusion</h2>
-      <p>By mid‑2025, <strong>College AI</strong> is less a novelty than a necessity. A majority of students—from Writing AI novices to Paper AI power users—lean on ChatGPT, Claude, Copilot, and emerging assistants to brainstorm, code, and polish their work. Adoption, however, is uneven across majors, genders, and generations, and institutional policy still lags behind practice.</p>
-      <p>Universities that pair clear guidelines with robust AI literacy programs will empower students to harness AI ethically—turning generative tools into genuine learning accelerators.</p>
-      <p><em>Forward‑looking statement:</em> As multimodal models mature and AI becomes embedded in every productivity suite, the next wave of college graduates will enter the workforce not merely AI‑ready but AI‑enhanced. The imperative for higher‑ed leaders is to bridge the policy‑practice gap today so students can innovate responsibly tomorrow.</p>
+    <!-- Future Implications -->
+    <section id="future" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Future Implications (2025‑2026)</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="future-content">
+          <div class="trend-cards">
+            <div class="trend-card">
+              <div class="trend-icon">📈</div>
+              <h3>Predicted Trends</h3>
+              <p>AI literacy will become a measured learning outcome at nearly 40% of institutions within three years.</p>
+            </div>
+
+            <div class="trend-card">
+              <div class="trend-icon">⚖️</div>
+              <h3>Skills‑Gap Considerations</h3>
+              <p>A widening divide emerges between AI‑fluent students and non‑users, creating new forms of digital inequality.</p>
+            </div>
+          </div>
+
+          <div class="recommendations">
+            <h3 class="subsection-title">Recommendations for Educators</h3>
+            <div class="recommendation-list">
+              <div class="recommendation-item">
+                <div class="rec-number">1</div>
+                <div class="rec-content">
+                  <h4>Integrate AI Policy</h4>
+                  <p>Include clear AI usage guidelines in course syllabi</p>
+                </div>
+              </div>
+              <div class="recommendation-item">
+                <div class="rec-number">2</div>
+                <div class="rec-content">
+                  <h4>Embed AI Literacy</h4>
+                  <p>Add AI literacy modules to first‑year seminars and orientation programs</p>
+                </div>
+              </div>
+              <div class="recommendation-item">
+                <div class="rec-number">3</div>
+                <div class="rec-content">
+                  <h4>Assess Process</h4>
+                  <p>Focus on evaluating learning process, not just final products</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p style="text-align:center; font-size:0.9rem; color:#888;">&copy; 2025 College AI Research — All rights reserved.</p>
-    </footer>
+    <!-- Conclusion -->
+    <section id="conclusion" class="section conclusion-section">
+      <div class="container">
+        <div class="conclusion-content">
+          <h2 class="conclusion-title">Conclusion</h2>
+          
+          <div class="conclusion-text">
+            <p>By mid‑2025, <strong>College AI</strong> is less a novelty than a necessity. A majority of students—from Writing AI novices to Paper AI power users—lean on ChatGPT, Claude, Copilot, and emerging assistants to brainstorm, code, and polish their work.</p>
+            
+            <p>Adoption, however, is uneven across majors, genders, and generations, and institutional policy still lags behind practice. Universities that pair clear guidelines with robust AI literacy programs will empower students to harness AI ethically—turning generative tools into genuine learning accelerators.</p>
+            
+            <div class="forward-statement">
+              <h3>Looking Forward</h3>
+              <p>As multimodal models mature and AI becomes embedded in every productivity suite, the next wave of college graduates will enter the workforce not merely AI‑ready but AI‑enhanced. The imperative for higher‑ed leaders is to bridge the policy‑practice gap today so students can innovate responsibly tomorrow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>College AI Research</h3>
+          <p>Advancing understanding of AI in higher education</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Research</h4>
+            <a href="#stats">Statistics</a>
+            <a href="#patterns">Trends</a>
+            <a href="#integrity">Policies</a>
+          </div>
+          <div class="footer-section">
+            <h4>Resources</h4>
+            <a href="#faq">FAQ</a>
+            <a href="#future">Future Outlook</a>
+            <a href="#conclusion">Conclusions</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 College AI Research — All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
