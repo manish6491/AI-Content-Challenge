@@ -133,7 +133,8 @@ function initializeCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRation: 2,
         plugins: {
           legend: {
             position: 'bottom',
